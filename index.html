@@ -103,6 +103,17 @@ section{padding:6rem 1.5rem;}
 .expect-icon{font-size:1.8rem;margin-bottom:.8rem;display:block;}
 .expect-card p{font-size:.9rem;font-weight:300;color:var(--mid);line-height:1.8;}
 
+/* EXPECT GALLERY */
+.expect-gallery{columns:3;column-gap:1rem;margin-top:3.5rem;}
+.expect-gallery figure{margin:0 0 1rem;break-inside:avoid;border-radius:6px;overflow:hidden;cursor:zoom-in;background:var(--blush);}
+.expect-gallery img{width:100%;height:auto;display:block;transition:transform .6s ease;}
+.expect-gallery figure:hover img{transform:scale(1.03);}
+@media(max-width:900px){.expect-gallery{columns:2;}}
+@media(max-width:520px){.expect-gallery{columns:2;column-gap:.6rem;}.expect-gallery figure{margin-bottom:.6rem;}}
+.lightbox{position:fixed;inset:0;background:rgba(40,25,30,.92);display:none;align-items:center;justify-content:center;z-index:9999;padding:1.5rem;cursor:zoom-out;}
+.lightbox.open{display:flex;}
+.lightbox img{max-width:100%;max-height:90vh;border-radius:4px;box-shadow:0 10px 40px rgba(0,0,0,.4);}
+
 /* SPEAKERS */
 .speakers{background:var(--ivory);}
 .speakers-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2.5rem;margin-top:3rem;}
@@ -355,8 +366,32 @@ footer{background:var(--charcoal);padding:4rem 2rem 2rem;}
       <div class="expect-card" style="opacity: 0; transform: translateY(20px); transition: opacity 0.6s, transform 0.6s;"><span class="expect-icon">🎶</span><p>Worship &amp; community moments to fill what's been running empty</p></div>
       <div class="expect-card" style="opacity: 0; transform: translateY(20px); transition: opacity 0.6s, transform 0.6s;"><span class="expect-icon">☁️</span><p>Rest without pressure — intentional white space built into every day</p></div>
     </div>
+    <div class="expect-gallery">
+      <figure><img src="https://raw.githubusercontent.com/flourishretreats/flourish-website/main/FCFA24A2-002D-4A74-AA54-62EECE606DB9.JPG" alt="A woman in a Flourish shirt with arms open wide, laughing with joy" loading="lazy" decoding="async"></figure>
+      <figure><img src="https://raw.githubusercontent.com/flourishretreats/flourish-website/main/1A0F7948-91C8-413D-96FB-9061C0B97218.JPG" alt="Two women holding hands in prayer beside the water" loading="lazy" decoding="async"></figure>
+      <figure><img src="https://raw.githubusercontent.com/flourishretreats/flourish-website/main/95B8A862-2FD8-4874-AA68-39E9A4BEA8AF.JPG" alt="A candlelit table set with flowers, gold chargers and sage linens" loading="lazy" decoding="async"></figure>
+      <figure><img src="https://raw.githubusercontent.com/flourishretreats/flourish-website/main/67F1AAB4-2ABA-4818-AC77-3DE477BDB7C9.JPG" alt="Two women sharing a warm embrace" loading="lazy" decoding="async"></figure>
+      <figure><img src="https://raw.githubusercontent.com/flourishretreats/flourish-website/main/IMG_6869.JPG" alt="A woman journaling in an armchair at the lodge" loading="lazy" decoding="async"></figure>
+      <figure><img src="https://raw.githubusercontent.com/flourishretreats/flourish-website/main/IMG_9056.JPG" alt="Women gathered around the fireplace for a session in the lodge" loading="lazy" decoding="async"></figure>
+      <figure><img src="https://raw.githubusercontent.com/flourishretreats/flourish-website/main/47EC6B7B-DDF7-4EDA-BE36-7B3E2F8D1312.JPG" alt="A woman hugging a seated friend from behind, both smiling" loading="lazy" decoding="async"></figure>
+      <figure><img src="https://raw.githubusercontent.com/flourishretreats/flourish-website/main/IMG_0120.jpg" alt="A chef assembling strawberry dessert cups" loading="lazy" decoding="async"></figure>
+      <figure><img src="https://raw.githubusercontent.com/flourishretreats/flourish-website/main/IMG_7543.jpg" alt="A small group talking at a table on a wooded cabin deck" loading="lazy" decoding="async" style="aspect-ratio:1/1;object-fit:cover;object-position:right bottom;"></figure>
+      <figure><img src="https://raw.githubusercontent.com/flourishretreats/flourish-website/main/IMG_0031.jpg" alt="A blush napkin with a pearl ring on floral china" loading="lazy" decoding="async"></figure>
+      <figure><img src="https://raw.githubusercontent.com/flourishretreats/flourish-website/main/8A93DFF3-A9ED-4880-B293-C279DD2FF885.JPG" alt="Two women in a tearful, heartfelt hug" loading="lazy" decoding="async"></figure>
+      <figure><img src="https://raw.githubusercontent.com/flourishretreats/flourish-website/main/IMG_0220.jpeg" alt="A woman journaling on the grass by the water" loading="lazy" decoding="async"></figure>
+      <figure><img src="https://raw.githubusercontent.com/flourishretreats/flourish-website/main/IMG_0098.jpg" alt="The chefs greeting women gathered at the dinner table" loading="lazy" decoding="async"></figure>
+      <figure><img src="https://raw.githubusercontent.com/flourishretreats/flourish-website/main/IMG_0013-preview.JPG" alt="Women taking selfies among autumn trees" loading="lazy" decoding="async"></figure>
+    </div>
   </div>
 </section>
+
+<div class="lightbox" id="lightbox"><img alt=""></div>
+<script>
+(function(){var lb=document.getElementById('lightbox'),li=lb.querySelector('img');
+document.querySelectorAll('.expect-gallery img').forEach(function(img){img.parentNode.addEventListener('click',function(){li.src=img.src;li.alt=img.alt;lb.classList.add('open');});});
+lb.addEventListener('click',function(){lb.classList.remove('open');});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')lb.classList.remove('open');});})();
+</script>
 
 <!-- RETREAT COMMUNITY -->
 <section class="speakers" id="speakers">
