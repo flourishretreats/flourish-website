@@ -205,6 +205,11 @@ footer{background:var(--charcoal);padding:4rem 2rem 2rem;}
   .expect-grid,.speakers-grid,.leaders-grid,.hosp-grid,.testi-grid{grid-template-columns:1fr;}
   .form-row{grid-template-columns:1fr;}
 }
+
+@media(max-width:860px){
+  .expect-photo-grid{grid-template-columns:1fr!important;}
+  .expect-photo-grid>div:first-child{order:0!important;}
+}
 </style>
 <style data-formspree-styles="">
     [data-fs-error],
@@ -367,21 +372,24 @@ footer{background:var(--charcoal);padding:4rem 2rem 2rem;}
 <!-- INVESTMENT -->
 <section class="investment" id="investment">
   <div class="investment-inner">
-    <p style="font-size:.65rem;letter-spacing:.28em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:.6rem;">Your Investment</p>
-    <h2>May 13–16, 2027 &amp; October 14–17, 2027</h2>
+    <p style="font-size:.65rem;letter-spacing:.28em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:.6rem;">Upcoming Flourish Retreats</p>
+    <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3vw,2.4rem);font-weight:300;color:white;margin-bottom:.5rem;">May 13–16, 2027</h2>
+    <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3vw,2.4rem);font-weight:300;color:white;margin-bottom:1.5rem;">October 14–17, 2027</h2>
     <div class="investment-line"></div>
+    <p class="investment-note">Two opportunities to step away from the demands of everyday life and make space to rest, reconnect with God, and tend to what He is growing in you.</p>
+    <div style="margin:2rem 0;padding:1.5rem;background:rgba(255,255,255,.1);border-radius:8px;text-align:left;">
+      <p style="font-size:.65rem;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.6);margin-bottom:1rem;">Your Flourish Experience</p>
+      <p style="font-size:.95rem;color:rgba(255,255,255,.9);font-weight:300;line-height:1.8;margin-bottom:1.2rem;">Flourish is intentionally small and personal. We gather a small group of women so there is space to slow down, rest, reconnect with God, and pay attention to what He is tending within you.</p>
+      <p style="font-size:.95rem;color:rgba(255,255,255,.9);font-weight:300;line-height:1.8;">Your Flourish experience includes three nights of accommodations, beautifully prepared meals, guided sessions, retreat materials and special gifts, along with intentional time for solitude, reflection, rest, and connection.</p>
+    </div>
+    <p style="font-size:.65rem;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.6);margin-bottom:.5rem;">Retreat Registration</p>
     <div class="investment-price">$750</div>
     <div class="investment-per">per person</div>
     <div class="investment-details">
-      <div class="investment-detail" style="font-size:1rem;font-style:italic;margin-bottom:.5rem;">Flourish is an opportunity to step away from the noise and make room for yourself again.</div>
-      <div class="investment-detail">Every part of the retreat is thoughtfully designed to help you slow down, feel supported, and experience rest, connection, and renewal in a meaningful way.</div>
-      <div class="investment-detail" style="font-family:&#39;Cormorant Garamond&#39;,serif;font-size:1.15rem;font-style:italic;color:white;margin:.8rem 0;">You are worthy of spaces that care for you too.</div>
-      <div class="investment-detail">All meals, sessions, retreat materials, Flourish gifts, and accommodations are included.</div>
-      <div class="investment-detail">Flexible payment options are available. If needed, please reach out — we are happy to help make your experience possible.</div>
-      <div class="investment-detail" style="margin-top:.8rem;">$250 deposit required to reserve your spot</div>
-      <div class="investment-detail">Monthly payment plans available via Zelle</div>
+      <div class="investment-detail">$250 deposit reserves your space</div>
+      <div class="investment-detail">Payment plans available</div>
+      <div class="investment-detail">Space is limited to keep the Flourish experience intimate and personal</div>
     </div>
-    <p class="investment-note">The retreat takes place on a private farm property outside of Charlotte, surrounded by nature with spaces designed for slowing down and resting — including a pond, fire pit, peaceful outdoor gathering areas, and quiet places to sit, reflect, and breathe.<br><br>Comparable retreat experiences, accommodations, meals, and wellness-focused experiences often exceed $1,300+ in value.</p>
     <a href="#flourish-form-anchor" class="btn-white">Apply for Flourish</a>
   </div>
 </section>
